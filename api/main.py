@@ -3,12 +3,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from datetime import datetime
 
-# flumart api endpoint query
-qry_xmart_csv_endpoint = 'https://xmart-api-public.who.int/FLUMART/VIW_FID?$format=csv'
-
-app = FastAPI()
-
-
 # models
 class ideal_influenza_infection_count:
     uuid: str
@@ -72,4 +66,9 @@ class european_flu_srv_count:
     ISOYW: str 
     MMWRYW: str
 
+
+# flumart api endpoint query
+qry_xmart_csv_endpoint = 'https://xmart-api-public.who.int/FLUMART/VIW_FID?$format=csv'
+
+app = FastAPI()
 
